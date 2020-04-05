@@ -4,10 +4,10 @@ import { useLocalStorage as lssHook } from './hooks/LocalStorageStateHook';
 import vlHook from './validation/useValidation';
 import * as rules from './validation/ValidationRules';
 import { ruleRunner as rr, hasErrors as he } from './validation/ValidationHelper';
+import es from './ErrorSpan';
 
-export const ExampleComponent = ({ text, children }) => {
-  return <div className={styles.test}>Example Component: {text} | {children}</div>
-}
+
+export const ErrorSpan = es;
 
 export const useLocalStorage = lssHook;
 

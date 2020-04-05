@@ -1,6 +1,16 @@
 import { useState } from 'react'
 import { runValidation, hasErrors } from './ValidationHelper';
 
+/**
+ * Provides hook for form validation and state management
+ * 
+ * @param  {any} initialModel Initial State
+ * @param  {Array<ruleRunner>} validationRules Array of ruleRunner
+ * @param  {Function} submitHandler What should happen when the form is submitted
+ * 
+ * @returns {any} model, errors = Object with error messages, submitted=t/f, 
+ *            modelOnChange handler to change model, onSubmit = add this to your form 
+ */
 export default (initialModel, validationRules, submitHandler) => {
 
   const [model, setModel] = useState(initialModel);
