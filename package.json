@@ -1,6 +1,6 @@
 {
   "name": "jlc-react-utils",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "description": "Made with create-react-library",
   "author": "Jorge Corradi",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-notifications": "^1.5.0"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.8",
@@ -49,5 +50,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-icons": "^3.9.0",
+    "axios": "^0.19.2"
+  }
 }
