@@ -10,7 +10,7 @@ export default ({ children, visible, title, onClose }) => {
           <div className={styles.boxHeader}>
             <strong>
               {title}
-            </strong><BsX style={{ cursor: 'pointer', float: 'right' }} size={30} onClick={onClose}>x</BsX>
+            </strong><BsX style={{ cursor: 'pointer', float: 'right' }} size={26} onClick={onClose}>x</BsX>
           </div>
           <div className={styles.boxContent}>
             {children}
