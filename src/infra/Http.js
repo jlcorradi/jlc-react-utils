@@ -2,8 +2,6 @@ import axios from 'axios';
 import dispatcher, { BUSY_STATE_CHANGED } from './GlobalDispatcher.js';
 import { NotificationManager } from 'react-notifications';
 
-export const AUTH_TOKEN_NAME = 'app@auth_token';
-
 axios.interceptors.request.use(
   config => {
     dispatcher.emit(BUSY_STATE_CHANGED, true);
@@ -46,24 +44,18 @@ const notify = headers => {
   }
 };
 
-export const updateAuthHeader = (token) => {
-  let newToken = token || localStorage.getItem(AUTH_TOKEN_NAME);
+export const updateAuthHeader = (authTokenName, token) => {
+  let newToken = token || localStorage.getItem(authTokenName);
   if (newToken) {
-    localStorage.setItem(AUTH_TOKEN_NAME, newToken);
+    localStorage.setItem(authTokenName, newToken);
     axios.defaults.headers = {
-      Authorization: `Bearer ${localStorage.getItem(AUTH_TOKEN_NAME)}`,
+      Authorization: `Bearer ${localStorage.getItem(authTokenName)}`,
     }
   }
 };
 
-export const clearAuthHeader = () => {
-  localStorage.setItem(AUTH_TOKEN_NAME, "");
-}
-
-if (localStorage.getItem(AUTH_TOKEN_NAME)) {
-  axios.defaults.headers = {
-    Authorization: `Bearer ${localStorage.getItem(AUTH_TOKEN_NAME)}`,
-  }
+export const clearAuthHeader = (authTokenName) => {
+  localStorage.setItem(authTokenName, "");
 }
 
 const request = axios;

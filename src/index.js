@@ -7,6 +7,7 @@ import es from './ErrorSpan';
 import request, { updateAuthHeader as updAuth, clearAuthHeader as clAuth } from './infra/Http';
 import LoaderComponent from './Loader';
 import modal from './Modal';
+import auth2Service from './infra/Auth2Service';
 
 export const ErrorSpan = es;
 
@@ -30,3 +31,4 @@ export const clearAuthHeader = clAuth;
 
 export const Modal = modal;
 
+export const Auth2Service = auth2Service;
