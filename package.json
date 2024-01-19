@@ -1,6 +1,6 @@
 {
   "name": "jlc-react-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Made with create-react-library",
   "author": "Jorge Corradi",
   "license": "MIT",
@@ -24,8 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-notifications": "^1.5.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -52,8 +51,9 @@
     "dist"
   ],
   "dependencies": {
-    "axios": "^1.2.1",
+    "axios": "^1.6.0",
     "jwt-decode": "^3.1.2",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-toastify": "^10.0.3"
   }
 }
